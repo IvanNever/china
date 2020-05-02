@@ -8,7 +8,6 @@
 		align-items: center
 	&__logo
 		width: 96px
-		height: 100px
 		img
 			width: 100%
 	ul
@@ -36,6 +35,11 @@
 				&:hover
 					color: $main-color
 					text-decoration: underline
+	&__contacts
+		margin-right: 20px
+		&-wrap
+			display: flex
+			align-items: center
 	&__descr
 		color: #ffffff
 		font-size: 14px
@@ -53,6 +57,8 @@
 		&:hover
 			color: $main-color
 			text-decoration: none
+	&__hamburger
+		display: none
 	&__official
 		margin-top: 9px
 		text-align: center
@@ -78,11 +84,12 @@
 		text-align: center
 	&__line
 		display: block
+		max-width: 90%
 		margin: 38px auto 0 auto
 	&__wrapper
 		display: flex
 		justify-content: space-between
-		padding-top: 31px
+		margin-top: 31px
 	&__item
 		width: 260px
 		&-img
@@ -97,6 +104,178 @@
 			font-weight: 300
 			line-height: 22px
 			text-align: center
+
+@media ( max-width: 1200px)
+	.promo
+		min-height: 100vh
+		padding-bottom: 50px
+		&__menu-item
+			a
+				font-size: 12px
+				line-height: 12px
+		&__descr
+			font-size: 12px
+			line-height: 12px
+		&__phone
+			font-size: 14px
+			line-height: 14px
+		&__official
+			font-size: 20px
+			line-height: 20px
+		&__title
+			font-size: 54px
+			line-height: 54px
+		&__subtitle
+			font-size: 36px
+			line-height: 36px
+		&__item
+			&-descr
+				font-size: 14px
+				line-height: 16px
+
+@media ( max-width: 992px )
+	.promo
+		padding-bottom: 45px
+		&__header
+			justify-content: space-around
+		&__menu
+			display: none
+			position: fixed
+			flex-direction: column
+			justify-content: center
+			text-align: center
+			top: 0
+			left: -100%
+			width: 50%
+			height: 100vh
+			background-color: rgba(0,0,0, .8)
+			transition: 0.5s all
+			&_active
+				display: flex
+				left: 0
+			&-item
+				border-right: none
+				padding: 0
+				a
+					font-size: 20px
+					line-height: 50px
+		&__hamburger
+			display: block
+			width: 45px
+			span
+				height: 5px
+				border-radius: 5px
+				width: 100%
+				margin-bottom: 8px
+				background-color: #fff
+				transition: all 0.5s
+			&_visible
+				span
+					display: block
+			&_active
+				display: none
+				width: 30px
+				position: fixed
+				top: 20px
+				left: 50%
+				transform: translateX(-50px)
+				transition: all 0.5s
+				&_visible
+					display: block
+				span
+					margin-bottom: -5px
+					&:nth-child(1)
+						transform: translateX(8px) rotate(-45deg)
+					&:nth-child(2)
+						display: none
+					&:nth-child(3)
+						transform: translateX(8px) rotate(45deg)
+		&__official
+			font-size: 18px
+			line-height: 18px
+		&__title
+			font-size: 46px
+			line-height: 46px
+		&__subtitle
+			font-size: 24px
+			line-height: 24px
+		&__line
+			margin-top: 26px
+		&__item
+			padding: 0 10px
+			width: 100%
+
+@media ( max-width: 767px )
+	.promo
+		&__official
+			margin-top: 15px
+			font-size: 16px
+			line-height: 16px
+		&__title
+			font-size: 34px
+			line-height: 34px
+		&__subtitle
+			font-size: 18px
+			line-height: 18px
+
+@media ( max-width: 575px )
+	.promo
+		&__header
+			justify-content: space-between
+		&__logo
+			width: 50px
+		&__menu
+			width: 75%
+		&__hamburger
+			&_active
+				top: 50px
+				left: 33%
+				transform: none
+		&__contacts
+			margin-right: 0
+			&-wrap
+				flex-direction: column
+				align-items: center
+		&__descr
+			text-align: center
+		&__official
+			font-size: 14px
+			line-height: 16px
+		&__title
+			font-size: 28px
+			line-height: 32px
+		&__subtitle
+			font-size: 16px
+			line-height: 20px
+		&__wrapper
+			flex-direction: column
+		&__item
+			margin-bottom: 20px
+		&__hamburger
+			span
+				height: 3px
+				width: 40px
+				text-align: center
+			&_active
+				span
+					margin-bottom: -3px
+					&:nth-child(1)
+						transform: translateX(4px) rotate(-45deg)
+					&:nth-child(2)
+						display: none
+					&:nth-child(3)
+						transform: translateX(4px) rotate(45deg)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
