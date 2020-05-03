@@ -1,0 +1,43 @@
+.agent
+    min-height: 342px
+    background: url(../img/agent_bg.jpg) center (center/cover) no-repeat
+    padding: 58px 20px 75px 20px
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__img
+        width: 102px
+        height: 102px
+        border: solid 1px #ffffff
+        border-radius: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+    &__header
+        margin-top: 20px
+        margin-bottom: 0
+        font-size: 26px
+        font-weight: 700
+        line-height: 1
+        text-align: center
+        color: #ffffff
+    &__descr
+        max-width: 984px
+        margin-top: 22px
+        font-size: 19px
+        font-weight: 300
+        line-height: 1.42
+        text-align: center
+        color: #ffffff
+@media  ( max-width: 768px )
+    .agent
+        padding: 40px 20px 50px 20px
+        &__header
+            font-size: 24px
+        &__descr
+            font-size: 18px
+
+
+
+
+
