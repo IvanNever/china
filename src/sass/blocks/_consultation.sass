@@ -1,0 +1,74 @@
+.consultation
+    padding-bottom: 80px
+    &__header
+        font-size: 28px
+        line-height: 1
+        text-align: center
+        color: #3a3a3a
+        font-weight: 400
+
+    &__wrapper
+        position: relative
+        margin-top: 71px
+        border: 1px solid #898989
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    &__icon
+        &-wrapper
+            width: 122px
+            background-color: #ffffff
+            z-index: 5
+            position: absolute
+            top: -50px
+        margin: 0 auto
+        z-index: 10
+        width: 102px
+        height: 102px
+        border: 1px solid $main-color
+        border-radius: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+
+    &__form
+        margin: 68px 0 53px
+        height: 100%
+        input
+            margin: 0 3px
+            width: 268px
+            height: 45px
+            border: solid 1px rgba(0, 0, 0, 0.21)
+            border-radius: 45px
+            padding: 0 20px
+            font-size: 13px
+            font-weight: 300
+            line-height: 1.85
+            text-align: left
+            color: rgba(16, 16, 16, 0.7)
+
+    &__button-wrapper
+        position: absolute
+        width: 200px
+        left: 50%
+        transform: translateX(-50%)
+        bottom: -22px
+        background-color: #ffffff
+
+@media  ( max-width: 992px )
+    .consultation
+        &__form
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            margin-bottom: 30px
+            input
+                margin-bottom: 20px
+@media  ( max-width: 575px )
+    .consultation
+        &__form
+            input
+                width: 260px
+
+
