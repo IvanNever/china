@@ -1,0 +1,75 @@
+.slick-slider
+    min-width: 0
+.slick-list
+    overflow: hidden
+.slick-track
+    display: flex
+.review
+    padding: 50px 0
+    &__item
+    &__img
+        display: flex
+        justify-content: center
+        align-items: center
+        img
+            width: 80px
+    &__header
+        margin-top: 15px
+        font-size: 12px
+        line-height: 1
+        text-align: center
+        font-weight: 700
+    &__descr
+        margin-top: 10px
+        font-size: 10px
+        font-weight: 300
+        line-height: 1.57
+        text-align: justify
+    &__inner
+        position: relative
+        margin-top: 30px
+        .slick-slide
+            width: 360px
+            margin: 20px 50px
+            outline: none
+            opacity: 0.4
+            &.slick-center
+                margin-top: 0
+                width: 600px
+                opacity: 1
+                .review
+                    &__img
+                        img
+                            width: 114px
+                    &__header
+                        margin-top: 19px
+                        font-size: 18px
+                        line-height: 1
+                        text-align: center
+                        font-weight: 700
+                    &__descr
+                        margin-top: 15px
+                        font-size: 14px
+                        font-weight: 300
+                        line-height: 1.57
+                        text-align: justify
+        .slick-arrow
+            position: absolute
+            top: 32px
+            z-index: 10
+            &.slick-prev
+                left: calc(50% - 110px)
+                border: none
+                background-color: transparent
+                outline: none
+            &.slick-next
+                left: calc(50% + 80px)
+                border: none
+                background-color: transparent
+                outline: none
+
+@media (max-width: 568px)
+    .review
+        &__inner
+            .slick-slide
+                margin: 20px
