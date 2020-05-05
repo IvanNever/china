@@ -1,0 +1,126 @@
+.footer
+	min-height: 201px
+	background-color: #25333c
+	margin-top: -2px
+	padding: 30px 0px
+	&__wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 0 10px
+	&__logo
+		width: 67px
+		img
+			width: 100%
+	&__official
+		margin-right: 200px
+		font-size: 16px
+		font-weight: 700
+		line-height: 1
+		color: #ffffff
+	&__contacts
+		margin-right: 19px
+		&-wrapper
+			display: flex
+			align-items: center
+			justify-content: space-between
+	&__descr
+		font-size: 14px
+		font-weight: 300
+		line-height: 1
+		text-align: right
+		color: #ffffff
+	&__phone
+		display: block
+		margin-top: 5px
+		font-size: 19px
+		font-weight: 700
+		line-height: 1
+		text-align: right
+		color: #ffffff
+		&:hover
+			text-decoration: none
+			color: #ffffff
+	&__line
+		height: 1px
+		background-color: rgba( 255, 255, 255, 0.3)
+		margin: 26px 0
+	&__copyrights
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 0 10px
+	&__copyright
+		font-size: 13px
+		font-weight: 300
+		line-height: 1
+		color: rgba(255, 255, 255, 0.6)
+	&__confidential
+		font-size: 13px
+		font-weight: 300
+		line-height: 1
+		color: $main-color
+		text-decoration: underline
+		&:hover
+			color: $main-color
+	&__create
+		font-size: 13px
+		font-weight: 300
+		line-height: 1
+		color: rgba(255, 255, 255, 0.6)
+		&:hover
+			text-decoration: none
+			color: rgba(255, 255, 255, 0.6)
+		img
+			margin-left: 10px
+			width: 50px
+
+@media screen and ( max-width: 1200px )
+		.footer
+			&__official
+				margin-right: 0
+
+@media screen and ( max-width: 992px )
+		.footer
+			&__logo
+				width: 50px
+			&__official
+				margin-right: 10px
+				font-size: 12px
+			&__descr, &__create, &__confidential
+				font-size: 12px
+			&__phone
+				font-size: 14px
+			&__line
+				margin: 20px 0
+
+@media screen and ( max-width: 768px )
+	.footer
+		&__wrapper
+			justify-content: space-around
+		&__official
+			display: none
+
+@media screen and ( max-width: 575px )
+	.footer
+		&__wrapper
+			flex-direction: column
+			padding: 0
+		&__contacts
+			&-wrapper
+				margin-top: 15px
+		&__copyrights
+			flex-direction: column
+		&__copyright
+			margin-top: 10px
+			order: 3
+		&__confidential
+			order: 1
+		&__create
+			margin-top: 10px
+			order: 2
+
+
+
+
+
