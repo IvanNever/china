@@ -318,10 +318,10 @@
                         <img src="icons/consultation.png" alt="consultation">
                     </div>
                 </div>
-                <form class="consultation__form" action="">
-                    <input type="text" placeholder="Ваше имя...">
-                    <input type="tel" placeholder="Ваш номер телефона...">
-                    <input type="email" placeholder="Ваш e-mail...">
+                <form class="form" action="">
+                    <input type="text" name="name" placeholder="Ваше имя...">
+                    <input type="tel" name="phone" placeholder="Ваш номер телефона...">
+                    <input type="email" name="email" placeholder="Ваш e-mail...">
                     <div class="consultation__button-wrapper">
                         <button class="button button_consult">Отправить заявку</button>
                     </div>
@@ -499,6 +499,29 @@
                     <div class="review__descr">
                         Хочу рассказать о компании Global Opt. Самое главное что меня радует, это быстрый поиск и анализ определенного товара. Доставляла через компанию уже много раз, от расходных материалов для отеля, ло дольших партий детской одежды. Буду продолжать пользтваьбся услугами даной компании
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="feedback">
+        <div class="container">
+            <div class="feedback__wrapper">
+                <div class="feedback__header">
+                    <div class="feedback__header-title">
+                        Остались вопросы?
+                    </div>
+                    <div class="feedback__header-subtitle">
+                        Напишите нам!
+                    </div>
+                </div>
+                <div class="feedback__body">
+                    <form action="" class="form form_feedback">
+                        <input type="text" name="name" placeholder="Ваше имя...">
+                        <input type="tel" name="phone" placeholder="Ваш номер телефона...">
+                        <input type="email" name="email" placeholder="Ваш e-mail...">
+                        <textarea name="message" id="feedback-message" placeholder="Сообщение..."></textarea>
+                        <button class="button button_feedback">Отправить заявку</button>
+                    </form>
                 </div>
             </div>
         </div>

@@ -1,0 +1,59 @@
+.form
+    margin: 68px 0 53px
+    height: 100%
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    input
+        margin: 0 3px
+        width: 268px
+        height: 45px
+        border: solid 1px rgba(0, 0, 0, 0.21)
+        border-radius: 45px
+        padding: 0 20px
+        font-size: 13px
+        font-weight: 300
+        line-height: 1.85
+        text-align: left
+        color: rgba(16, 16, 16, 0.7)
+    textarea
+        margin-top: 8px
+        width: 813px
+        height: 71px
+        border-radius: 8px
+        border: solid 1px rgba(0, 0, 0, 0.21)
+        background-color: #ffffff
+        font-size: 13px
+        font-weight: 300
+        line-height: 3.92
+        text-align: left
+        color: rgba(16, 16, 16, 0.7)
+        padding: 0 20px
+        resize: none
+    &_feedback
+        margin: 0
+        input
+            margin: 0
+
+@media  ( max-width: 992px )
+    .form
+        justify-content: center
+        margin-bottom: 30px
+        input
+            margin-bottom: 20px
+        &_feedback
+            margin-bottom: 0
+            input
+                margin: 0 3px 20px
+            textarea
+                margin-bottom: 10px
+                height: 90px
+
+
+@media  ( max-width: 575px )
+    .form
+        input
+            width: 260px
+        &_feedback
+            textarea
+                height: 200px
