@@ -1,4 +1,31 @@
+
 $(document).ready(function(){
+
+    //Hamburger menu
+    window.addEventListener('DOMContentLoaded', () => {
+        const menu = document.querySelector('.promo__menu'),
+        menuItem = document.querySelectorAll('.promo__menu-item'),
+        hamburger = document.querySelector('.promo__hamburger');
+
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('promo__menu_active');
+            hamburger.classList.toggle('promo__hamburger_active');
+            setTimeout(() => hamburger.classList.toggle('promo__hamburger_active_visible'), 500);
+
+
+        });
+
+        menuItem.forEach(item => {
+            item.addEventListener('click', () => {
+                menu.classList.toggle('promo__menu_active');
+                hamburger.classList.toggle('promo__hamburger_active');
+                setTimeout(() => hamburger.classList.toggle('promo__hamburger_active_visible'), 500);
+            })
+        })
+    });
+
+
+    //Slick slider
     $('.review__inner').slick({
         slidesToShow: 3,
         centerMode: true,
@@ -14,27 +41,22 @@ $(document).ready(function(){
             }
         ]
     });
-  });
 
-
-window.addEventListener('DOMContentLoaded', () => {
-    const menu = document.querySelector('.promo__menu'),
-    menuItem = document.querySelectorAll('.promo__menu-item'),
-    hamburger = document.querySelector('.promo__hamburger');
-
-    hamburger.addEventListener('click', () => {
-        menu.classList.toggle('promo__menu_active');
-        hamburger.classList.toggle('promo__hamburger_active');
-        setTimeout(() => hamburger.classList.toggle('promo__hamburger_active_visible'), 500);
-
-
+    //Send mail
+    $('form').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done( function() {
+            $(this).find("input").val("");
+            // $('#consultation, #order').fadeOut();
+            // $('.overlay, #success').fadeIn('slow');
+            $('form').trigger('reset');
+        });
+        return false;
     });
 
-    menuItem.forEach(item => {
-        item.addEventListener('click', () => {
-            menu.classList.toggle('promo__menu_active');
-            hamburger.classList.toggle('promo__hamburger_active');
-            setTimeout(() => hamburger.classList.toggle('promo__hamburger_active_visible'), 500);
-        })
-    })
-})
+  });
+
