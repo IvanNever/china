@@ -7,26 +7,26 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <section class="promo">
+    <section class="promo" id="up">
         <div class="container">
             <header class="promo__header">
-                <a href="#" class="promo__logo">
+                <a href="#up" class="promo__logo">
                     <img src="icons/logo.svg" alt="logo">
                 </a>
                 <ul class="promo__menu">
-                    <li class="promo__menu-item"><a href="#">Преимущества</a></li>
-                    <li class="promo__menu-item"><a href="#">Наша работа</a></li>
-                    <li class="promo__menu-item"><a href="#">Цены</a></li>
-                    <li class="promo__menu-item"><a href="#">Схема работы</a></li>
-                    <li class="promo__menu-item"><a href="#">Отзывы</a></li>
-                    <li class="promo__menu-item"><a href="#">Контакты</a></li>
+                    <li class="promo__menu-item"><a href="#advantages">Преимущества</a></li>
+                    <li class="promo__menu-item"><a href="#more">Наша работа</a></li>
+                    <li class="promo__menu-item"><a href="#price">Цены</a></li>
+                    <li class="promo__menu-item"><a href="#scheme">Схема работы</a></li>
+                    <li class="promo__menu-item"><a href="#review">Отзывы</a></li>
+                    <li class="promo__menu-item"><a href="#feedback">Контакты</a></li>
                 </ul>
                 <div class="promo__contacts-wrap">
                     <div class="promo__contacts">
                         <div class="promo__descr">Есть вопросы?</div>
                         <a href="tel:+380442220101" class="promo__phone">+38 (044) 222 01 01</a>
                     </div>
-                    <button class="button">Перезвоните мне</button>
+                    <a href="#consultation" class="button">Перезвоните мне</a>
                 </div>
                 <div class="promo__hamburger promo__hamburger_visible">
                     <span></span>
@@ -66,10 +66,10 @@
                     </div>
                 </div>
             </div>
-            <button class="button button_main">Получить расчет</button>
+            <a href="#consultation" class="button button_main">Получить расчет</a>
         </div>
     </section>
-    <section class="advantages">
+    <section id="advantages" class="advantages">
         <div class="container">
             <h2 class="title">Преимущества работы с GlobalOpt</h2>
             <div class="advantages__wrapper">
@@ -184,7 +184,7 @@
             </div>
         </div>
     </section>
-    <section class="more">
+    <section id="more" class="more">
         <div class="container">
             <h2 class="title">Наша работа - больше чем просто доставка</h2>
             <div class="title-line"></div>
@@ -232,7 +232,7 @@
             Русскоговорящие представители компании без труда найдут именно тот товар, который будет отвечать Вашим запросам как по качеству, так и по цене.
         </div>
     </section>
-    <section class="price">
+    <section id="price" class="price">
         <div class="container">
             <h2 class="title">Цены на любой вариант доставки</h2>
             <div class="title-line"></div>
@@ -254,7 +254,7 @@
                     <div class="price__descr">
                         Морские перевозки грузов из Китая в Украину за 35 дней с прохождением таможни
                     </div>
-                    <button class="button button_price">Подробнее</button>
+                    <a href="#consultation" class="button button_price">Подробнее</a>
                 </div>
                 <div class="price__item">
                     <div class="price__header">
@@ -272,7 +272,7 @@
                     <div class="price__descr">
                         ЖД перевозки грузов из Китая в Украину от 2 недель с прохождением таможни
                     </div>
-                    <button class="button button_price">Подробнее</button>
+                    <a href="#consultation" class="button button_price">Подробнее</a>
                 </div>
                 <div class="price__item">
                     <div class="price__header">Автодоставка</div>
@@ -288,7 +288,7 @@
                     <div class="price__descr">
                         Автоперевозки грузов из Китая в Украину от 2 недель с прохождением таможни
                     </div>
-                    <button class="button button_price">Подробнее</button>
+                    <a href="#consultation" class="button button_price">Подробнее</a>
                 </div>
                 <div class="price__item">
                     <div class="price__header">Авиа доставка</div>
@@ -304,12 +304,12 @@
                     <div class="price__descr">
                         Авиаперевозки грузов из Китая в Украину до 2 недель с прохождением таможни
                     </div>
-                    <button class="button button_price">Подробнее</button>
+                    <a href="#consultation" class="button button_price">Подробнее</a>
                 </div>
             </div>
         </div>
     </section>
-    <section class="consultation">
+    <section id="consultation" class="consultation">
         <div class="container">
             <h2 class="consultation__header">Заказать бесплатную консультацию</h2>
             <div class="consultation__wrapper">
@@ -339,7 +339,7 @@
             Подберут для Вас оптимальную схему грузоперевозки. Проведут контроль закупок, организуют прямые поставки от завода-изготовителя.
         </div>
     </section>
-    <section class="advantages advantages_scheme">
+    <section id="scheme" class="advantages advantages_scheme">
         <div class="container">
             <h2 class="title">Схема работы с нами</h2>
             <div class="advantages__wrapper advantages__wrapper_scheme">
@@ -437,7 +437,7 @@
             </div>
         </div>
     </section>
-    <section class="review">
+    <section id="review" class="review">
         <div class="container">
             <h2 class="title">отзывы наших клиентов</h2>
             <div class="title-line"></div>
@@ -503,7 +503,7 @@
             </div>
         </div>
     </section>
-    <section class="feedback">
+    <section id="feedback" class="feedback">
         <div class="container">
             <div class="feedback__wrapper">
                 <div class="feedback__header">
@@ -532,9 +532,9 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__wrapper">
-                <div class="footer__logo">
+                <a href="#up" class="footer__logo">
                     <img src="icons/logo.svg" alt="logo">
-                </div>
+                </a>
                 <div class="footer__official">
                     Global Opt - Доставка грузов из Китая в Украину и СНГ
                 </div>
@@ -543,7 +543,7 @@
                         <div class="footer__descr">Есть вопросы?</div>
                         <a href="tel:+380442220101" class="footer__phone">+38 (044) 222 01 01</a>
                     </div>
-                    <button class="button button_footer">Перезвоните мне</button>
+                    <a href="#consultation" class="button button_footer">Перезвоните мне</a>
                 </div>
             </div>
             <div class="footer__line"></div>
@@ -551,7 +551,7 @@
                 <div class="footer__copyright">
                     © 2020 web-kit.com.ua
                 </div>
-                <a href="#" class="footer__confidential">Политика конфидециальности</a>
+                <a href="#up" class="footer__confidential">Политика конфидециальности</a>
                 <a href="https://www.web-kit.com.ua/" class="footer__create">
                     Создание сайта:
                     <img src="icons/wk.png" alt="web-kit">
@@ -566,6 +566,7 @@
             <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
         </div>
     </div>
+    <a href="#up" class="page-up"><img src="icons/chevron-up-solid.svg" alt="page-up"></a>
 
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
