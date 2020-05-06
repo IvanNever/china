@@ -318,10 +318,10 @@
                         <img src="icons/consultation.png" alt="consultation">
                     </div>
                 </div>
-                <form class="form" action="">
-                    <input type="text" name="name" placeholder="Ваше имя...">
-                    <input type="tel" name="phone" placeholder="Ваш номер телефона...">
-                    <input type="email" name="email" placeholder="Ваш e-mail...">
+                <form class="form" id="consultation-form" action="">
+                    <input type="text" name="name" placeholder="Ваше имя..." required>
+                    <input type="tel" name="phone" placeholder="Ваш номер телефона..." required>
+                    <input type="email" name="email" placeholder="Ваш e-mail..." required>
                     <div class="consultation__button-wrapper">
                         <button class="button button_consult">Отправить заявку</button>
                     </div>
@@ -515,10 +515,10 @@
                     </div>
                 </div>
                 <div class="feedback__body">
-                    <form action="" class="form form_feedback">
-                        <input type="text" name="name" placeholder="Ваше имя...">
-                        <input type="tel" name="phone" placeholder="Ваш номер телефона...">
-                        <input type="email" name="email" placeholder="Ваш e-mail...">
+                    <form action="" id="feedback-form" class="form form_feedback">
+                        <input type="text" name="name" placeholder="Ваше имя..." required>
+                        <input type="tel" name="phone" placeholder="Ваш номер телефона..." required>
+                        <input type="email" name="email" placeholder="Ваш e-mail..." required>
                         <textarea name="message" id="feedback-message" placeholder="Сообщение..."></textarea>
                         <button class="button button_feedback">Отправить заявку</button>
                     </form>
@@ -563,6 +563,7 @@
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

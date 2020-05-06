@@ -58,5 +58,29 @@ $(document).ready(function(){
         return false;
     });
 
+    //Validation
+    function valideForm (form) {
+        $(form).validate({
+            rules: {
+                name: 'required',
+                phone: 'required',
+                email: {
+                    required: true,
+                    email: true
+                },
+            },
+            messages: {
+                name: '*Пожалуйста введите свое имя',
+                phone: '*Пожалуйста укажите номер телефона',
+                email: {
+                    required: '*Пожалуйста введите свою почту',
+                    email: '*Укажите правильный адрес почты'
+                },
+            },
+        });
+    };
+    valideForm('#consultation-form');
+    valideForm('#feedback-form');
+
   });
 
