@@ -72,6 +72,7 @@ $(document).ready(function(){
                     data: $(form).serialize()
                 }).done(function() {
                     $('form').find("input").val("");
+                    $('.overlay, #success').fadeIn('slow');
                     $('form').trigger('reset');
                 });
                 return false;
@@ -82,7 +83,10 @@ $(document).ready(function(){
     sendForm('#consultation-form');
     sendForm('#feedback-form');
 
-
+    //Modal
+    $('.modal__close').on('click', function() {
+        $('.overlay, .modal').fadeOut('slow');
+    });
 
   });
 
