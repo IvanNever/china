@@ -42,24 +42,12 @@ $(document).ready(function(){
         ]
     });
 
-    //Send mail
-    $('form').submit(function(e) {
+    //Send forms
+    $('form').on('submit', function(e){
         e.preventDefault();
-        $.ajax({
-            type: "POST",
-            url: "mailer/smart.php",
-            data: $(this).serialize()
-        }).done( function() {
-            $(this).find("input").val("");
-            // $('#consultation, #order').fadeOut();
-            // $('.overlay, #success').fadeIn('slow');
-            $('form').trigger('reset');
-        });
-        return false;
     });
 
-    //Validation
-    function valideForm (form) {
+    function sendForm (form) {
         $(form).validate({
             rules: {
                 name: 'required',
@@ -77,10 +65,24 @@ $(document).ready(function(){
                     email: '*Укажите правильный адрес почты'
                 },
             },
+            submitHandler: function() {
+                $.ajax({
+                    type: "POST",
+                    url: "mailer/smart.php",
+                    data: $(form).serialize()
+                }).done(function() {
+                    $('form').find("input").val("");
+                    $('form').trigger('reset');
+                });
+                return false;
+              }
         });
     };
-    valideForm('#consultation-form');
-    valideForm('#feedback-form');
+
+    sendForm('#consultation-form');
+    sendForm('#feedback-form');
+
+
 
   });
 
