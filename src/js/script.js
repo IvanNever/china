@@ -90,14 +90,14 @@ $(document).ready(function(){
 
     //Smooth scroll and page up
     $(window).scroll( function() {
-        if($(this).scrollTop() > 1200) {
+        if($(this).scrollTop() > 1000) {
             $('.page-up').fadeIn();
         } else {
             $('.page-up').fadeOut();
         }
     });
     $(function(){
-        $("a[href^='#']").click(function(){
+        $("a.scroll[href^='#']").click(function(){
             const _href = $(this).attr("href");
             $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
             return false;
